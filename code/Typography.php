@@ -10,7 +10,7 @@
  *
  * License: MIT-style license http://opensource.org/licenses/MIT
  * Authors: Techno Joy development team (www.technojoy.co.nz)
- * Inspired by http://sunny.svnrepository.com/svn/sunny-side-up-general/typography/trunk/
+ * Inspired by http://sunny.svnrepository.com/svn/sunny-side-up-general/typography/
  */
 class Typo extends Page_Controller{
 
@@ -20,4 +20,5 @@ class Typo extends Page_Controller{
 			basename(dirname(dirname(__FILE__))) . "/javascript/typo.js"
 		);
 	}
+
 }
