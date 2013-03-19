@@ -1,7 +1,5 @@
-<div id="TypoTestPage" class="typography">
-<p>This page comes into three parts: <a href="#typography">typography definitions</a>, <% if SiteColours %><a href="#CssColorChart">colour charts</a>, <% end_if %> and <a href="#form">form definitions</a>.</p>
+<div id="TypoTestPage">
 
-<a name="typography"></a>
 <h1>Instructions for Typography Test Page</h1>
 <p>
 	This page allows you to review typographic formatting for this website.
@@ -20,7 +18,7 @@
 </p>
 <hr />
 <hr />
-<p>these are horizontal lines</p>
+<p>These are horizontal lines</p>
 <hr />
 <hr />
 <h3>Bold, italic, underline, and links</h3>
@@ -422,7 +420,7 @@
 		Nulla consequat nunc id sem.
 	</p>
 </blockquote>
-<h1>and here is some quoted text (for a smaller quote)</h1>
+<h1>And here is some quoted text (for a smaller quote)</h1>
 <p>
 	Ut vulputate ante.
 	<q>Quote goes here</q>
@@ -460,7 +458,7 @@
 	Nullam sed tortor.
 	Aenean tellus est, bibendum non, fringilla in, eleifend vitae, erat.
 </p>
-<h6>example of heading 6</h6>
+<h6>Example of Heading 6</h6>
 <p style="text-align: right">
 	Here is an example of a right-aligned paragraph.
 	Duis libero enim, dapibus sed, iaculis et, rutrum ac, metus.
@@ -487,9 +485,5 @@
 <h4>heading 4: The quick brown fox jumps over the lazy dog</h4>
 <h5>heading 5: The quick brown fox jumps over the lazy dog</h5>
 <h6>heading 6: The quick brown fox jumps over the lazy dog</h6>
-<hr />
-<hr />
-<hr />
-<hr />
 <hr />
 </div>
