@@ -1,0 +1,20 @@
+{
+	"name": "axllent/silverstripe-typography",
+	"description": "A simple extension (extending Page) to add a simple typography test page to see your website styles",
+	"type": "silverstripe-module",
+	"homepage": "https://github.com/axllent/silverstripe-typography",
+	"keywords": ["silverstripe", "typography", "testing"],
+	"license": "The MIT License (MIT)",
+	"authors": [
+		{
+			"name": "Ralph Slooten",
+			"homepage": "http://www.axllent.org/"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/axllent/silverstripe-typography/issues"
+	},
+	"require": {
+		"silverstripe/framework": ">=2.4"
+	}
+}
