@@ -1,2 +1,2 @@
 <?php
-/* No Config - simply access your website via website.com/typo */
+/* No config - simply access your website via website.com/typo */

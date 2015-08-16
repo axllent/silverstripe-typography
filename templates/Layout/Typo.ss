@@ -1,3 +1,3 @@
 <div class="typography">
-<% include Typography %>
+	<% include Typography %>
 </div>

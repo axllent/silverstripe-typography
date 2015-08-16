@@ -1,6 +1,6 @@
-function tagsToTitle(){
+function tagsToTitle() {
 	var els = document.getElementById("TypoTestPage").getElementsByTagName("*");
-	for (var i=0, max=els.length; i < max; i++) {
+	for (var i = 0, max = els.length; i < max; i++) {
 		var el = els[i];
 		var classes = [];
 
@@ -12,11 +12,11 @@ function tagsToTitle(){
 		classes.push(t);
 
 		var p = el.parentNode;
-		while(p && p.id != "TypoTestPage") {
+		while (p && p.id != "TypoTestPage") {
 			var t = p.tagName;
 			var s = p.getAttribute('style');
 			var c = p.getAttribute('class');
-			if(s) t = t + '[' + s + ']';
+			if (s) t = t + '[' + s + ']';
 			else if (c) t = t + '[class="' + c + '"]';
 			classes.push(t);
 			p = p.parentNode;
@@ -27,4 +27,4 @@ function tagsToTitle(){
 }
 
 var w = window;
-w.addEventListener ? w.addEventListener("load",tagsToTitle,!1) : w.attachEvent && w.attachEvent("onload",tagsToTitle);
+w.addEventListener ? w.addEventListener("load", tagsToTitle, !1) : w.attachEvent && w.attachEvent("onload", tagsToTitle);
