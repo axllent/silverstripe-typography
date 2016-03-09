@@ -12,17 +12,18 @@
  * Author: Techno Joy development team (www.technojoy.co.nz)
  * Inspired by https://github.com/sunnysideup/silverstripe-typography
  */
-class Typo extends Page_Controller
+class Typography_Controller extends Page_Controller
 {
 
-    public function init()
+    public function index()
     {
-        parent::init();
         Requirements::javascript(
             basename(dirname(dirname(__FILE__))) . '/javascript/typo.js'
         );
         $this->Title = 'Typography test page';
         $this->ExtraMeta .= '<meta name="robots" content="noindex, nofollow" />';
+
+        return $this->renderWith(array('Typography', 'Page'));
     }
 
     function TypoForm()

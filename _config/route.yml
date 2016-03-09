@@ -1,0 +1,7 @@
+---
+Name: myroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'typo':   'Typography_Controller'
