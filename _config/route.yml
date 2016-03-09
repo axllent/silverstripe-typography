@@ -1,6 +1,8 @@
 ---
-Name: myroutes
+Name: typographyroute
 After: framework/routes#coreroutes
+Only:
+  environment: 'dev'
 ---
 Director:
   rules:
