@@ -15,6 +15,6 @@
 		"issues": "https://github.com/axllent/silverstripe-typography/issues"
 	},
 	"require": {
-		"silverstripe/framework": ">=3"
+		"silverstripe/framework": "^3.0"
 	}
 }

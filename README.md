@@ -6,6 +6,11 @@ It includes a JavaScript function to add element titles to all elements in the t
 ## Requirements
 - SilverStripe 3+ in `dev` environment
 
+## Installation
+```
+composer require axllent/silverstripe-typography
+```
+
 ## Usage
 Install the module, run a `?flush=1` and access your website with /typo (eg: www.example.com/typo).
 Please note that your website must be in the `dev` environment for the route to be activated.
