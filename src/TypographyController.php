@@ -58,25 +58,26 @@ class TypographyController extends PageController
             'TestForm',
             $fields = FieldList::create(
                 HeaderField::create('HeaderField1', 'HeaderField Level 1', 1),
-                LiteralField::create('SilverStripe\\Forms\\LiteralField', '<p>All fields up to EmailField are required and should be marked as such</p>'),
+                LiteralField::create('LiteralField', '<p>All fields up to EmailField are required and should be marked as such</p>'),
                 TextField::create('TextField1', 'Text Field Example 1'),
                 TextField::create('TextField2', 'Text Field Example 2'),
                 TextField::create('TextField3', 'Text Field Example 3'),
                 TextField::create('TextField4', ''),
                 HeaderField::create('HeaderField2b', 'Field with right title', 2),
-                $textAreaField = new TextareaField('SilverStripe\\Forms\\TextareaField', 'Textarea Field'),
-                EmailField::create('SilverStripe\\Forms\\EmailField', 'Email address'),
+                TextareaField::create('TextareaField', 'Textarea Field')
+                    ->setColumns(45),
+                EmailField::create('EmailField', 'Email address'),
                 HeaderField::create('HeaderField2c', 'HeaderField Level 2', 2),
-                DropdownField::create('SilverStripe\\Forms\\DropdownField', 'Dropdown Field', array( 0 => '-- please select --', 1 => 'test AAAA', 2 => 'test BBBB')),
+                DropdownField::create('DropdownField', 'Dropdown Field', array( 0 => '-- please select --', 1 => 'test AAAA', 2 => 'test BBBB')),
                 OptionsetField::create('OptionSF', 'Optionset Field', $array),
                 CheckboxSetField::create('CheckboxSF', 'Checkbox Set Field', $array),
-                CountryDropdownField::create('SilverStripe\\Forms\\CountryDropdownField', 'Countries'),
-                CurrencyField::create('SilverStripe\\Forms\\CurrencyField', 'Bling bling', '$123.45'),
+                CountryDropdownField::create('CountryDropdownField', 'Countries'),
+                CurrencyField::create('CurrencyField', 'Bling bling', '$123.45'),
                 HeaderField::create('HeaderField3', 'Other Fields', 3),
-                NumericField::create('SilverStripe\\Forms\\NumericField', 'Numeric Field '),
-                DateField::create('SilverStripe\\Forms\\DateField', 'Date Field'),
+                NumericField::create('NumericField', 'Numeric Field '),
+                DateField::create('DateField', 'Date Field'),
                 DateField::create('DateTimeField', 'Date and Time Field'),
-                CheckboxField::create('SilverStripe\\Forms\\CheckboxField', 'Checkbox Field')
+                CheckboxField::create('CheckboxField', 'Checkbox Field')
             ),
             $actions = FieldList::create(
                 FormAction::create('submit', 'Submit Button')
@@ -87,14 +88,14 @@ class TypographyController extends PageController
                 'TextField3',
                 'ErrorField1',
                 'ErrorField2',
-                'SilverStripe\\Forms\\EmailField',
+                'EmailField',
                 'TextField3',
                 'RightTitleField',
-                'SilverStripe\\Forms\\CheckboxField',
-                'SilverStripe\\Forms\\CheckboxSetField'
+                'CheckboxField',
+                'CheckboxSetField'
             )
         );
-        $textAreaField->setColumns(45);
+
         $form->setMessage('warning message', 'warning');
         return $form;
     }
