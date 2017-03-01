@@ -1,4 +1,28 @@
 <?php
+
+namespace Axllent\Typography;
+
+use PageController;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\CheckboxSetField;
+use SilverStripe\Forms\CountryDropdownField;
+use SilverStripe\Forms\CurrencyField;
+use SilverStripe\Forms\DateField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\EmailField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\Form;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\NumericField;
+use SilverStripe\Forms\OptionsetField;
+use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\View\Requirements;
+
+
 /**
  * Typography test page for SilverStripe
  * =====================================
@@ -12,7 +36,7 @@
  * Author: Techno Joy development team (www.technojoy.co.nz)
  * Inspired by https://github.com/sunnysideup/silverstripe-typography
  */
-class Typography_Controller extends Page_Controller
+class TypographyController extends PageController
 {
 
     public function index()
@@ -34,25 +58,25 @@ class Typography_Controller extends Page_Controller
             'TestForm',
             $fields = FieldList::create(
                 HeaderField::create('HeaderField1', 'HeaderField Level 1', 1),
-                LiteralField::create('LiteralField', '<p>All fields up to EmailField are required and should be marked as such</p>'),
+                LiteralField::create('SilverStripe\\Forms\\LiteralField', '<p>All fields up to EmailField are required and should be marked as such</p>'),
                 TextField::create('TextField1', 'Text Field Example 1'),
                 TextField::create('TextField2', 'Text Field Example 2'),
                 TextField::create('TextField3', 'Text Field Example 3'),
                 TextField::create('TextField4', ''),
                 HeaderField::create('HeaderField2b', 'Field with right title', 2),
-                $textAreaField = new TextareaField('TextareaField', 'Textarea Field'),
-                EmailField::create('EmailField', 'Email address'),
+                $textAreaField = new TextareaField('SilverStripe\\Forms\\TextareaField', 'Textarea Field'),
+                EmailField::create('SilverStripe\\Forms\\EmailField', 'Email address'),
                 HeaderField::create('HeaderField2c', 'HeaderField Level 2', 2),
-                DropdownField::create('DropdownField', 'Dropdown Field', array( 0 => '-- please select --', 1 => 'test AAAA', 2 => 'test BBBB')),
+                DropdownField::create('SilverStripe\\Forms\\DropdownField', 'Dropdown Field', array( 0 => '-- please select --', 1 => 'test AAAA', 2 => 'test BBBB')),
                 OptionsetField::create('OptionSF', 'Optionset Field', $array),
                 CheckboxSetField::create('CheckboxSF', 'Checkbox Set Field', $array),
-                CountryDropdownField::create('CountryDropdownField', 'Countries'),
-                CurrencyField::create('CurrencyField', 'Bling bling', '$123.45'),
+                CountryDropdownField::create('SilverStripe\\Forms\\CountryDropdownField', 'Countries'),
+                CurrencyField::create('SilverStripe\\Forms\\CurrencyField', 'Bling bling', '$123.45'),
                 HeaderField::create('HeaderField3', 'Other Fields', 3),
-                NumericField::create('NumericField', 'Numeric Field '),
-                DateField::create('DateField', 'Date Field'),
+                NumericField::create('SilverStripe\\Forms\\NumericField', 'Numeric Field '),
+                DateField::create('SilverStripe\\Forms\\DateField', 'Date Field'),
                 DateField::create('DateTimeField', 'Date and Time Field'),
-                CheckboxField::create('CheckboxField', 'Checkbox Field')
+                CheckboxField::create('SilverStripe\\Forms\\CheckboxField', 'Checkbox Field')
             ),
             $actions = FieldList::create(
                 FormAction::create('submit', 'Submit Button')
@@ -63,11 +87,11 @@ class Typography_Controller extends Page_Controller
                 'TextField3',
                 'ErrorField1',
                 'ErrorField2',
-                'EmailField',
+                'SilverStripe\\Forms\\EmailField',
                 'TextField3',
                 'RightTitleField',
-                'CheckboxField',
-                'CheckboxSetField'
+                'SilverStripe\\Forms\\CheckboxField',
+                'SilverStripe\\Forms\\CheckboxSetField'
             )
         );
         $textAreaField->setColumns(45);

@@ -1,9 +1,9 @@
 ---
-Name: typographyroute
+Name: typographycontroller
 After: framework/routes#coreroutes
 Only:
   environment: 'dev'
 ---
-Director:
+SilverStripe\Control\Director:
   rules:
-    'typo':   'Typography_Controller'
+    'typo':   'Axllent\Typography\TypographyController'
