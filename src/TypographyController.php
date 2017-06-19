@@ -10,6 +10,7 @@ use SilverStripe\Forms\CurrencyField;
 use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\EmailField;
+use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\FormAction;
@@ -63,9 +64,15 @@ class TypographyController extends PageController
                 TextField::create('TextField2', 'Text Field Example 2'),
                 TextField::create('TextField3', 'Text Field Example 3'),
                 TextField::create('TextField4', ''),
+                HeaderField::create('FieldGroupHdr', 'First/last name FieldGroup'),
+                FieldGroup::create(
+                    TextField::create('FirstName1', 'First Name'),
+                    TextField::create('LastName1', 'Last Name')
+                ),
                 HeaderField::create('HeaderField2b', 'Field with right title', 2),
                 TextareaField::create('TextareaField', 'Textarea Field')
-                    ->setColumns(45),
+                    ->setColumns(45)
+                    ->setRightTitle('This is the right title'),
                 EmailField::create('EmailField', 'Email address'),
                 HeaderField::create('HeaderField2c', 'HeaderField Level 2', 2),
                 DropdownField::create('DropdownField', 'Dropdown Field', array( 0 => '-- please select --', 1 => 'test AAAA', 2 => 'test BBBB')),
