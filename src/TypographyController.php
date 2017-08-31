@@ -5,9 +5,9 @@ namespace Axllent\Typography;
 use PageController;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CheckboxSetField;
-use SilverStripe\Forms\CountryDropdownField;
 use SilverStripe\Forms\CurrencyField;
 use SilverStripe\Forms\DateField;
+use SilverStripe\Forms\DateTimeField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldGroup;
@@ -78,12 +78,11 @@ class TypographyController extends PageController
                 DropdownField::create('DropdownField', 'Dropdown Field', array( 0 => '-- please select --', 1 => 'test AAAA', 2 => 'test BBBB')),
                 OptionsetField::create('OptionSF', 'Optionset Field', $array),
                 CheckboxSetField::create('CheckboxSF', 'Checkbox Set Field', $array),
-                CountryDropdownField::create('CountryDropdownField', 'Countries'),
                 CurrencyField::create('CurrencyField', 'Bling bling', '$123.45'),
                 HeaderField::create('HeaderField3', 'Other Fields', 3),
                 NumericField::create('NumericField', 'Numeric Field '),
                 DateField::create('DateField', 'Date Field'),
-                DateField::create('DateTimeField', 'Date and Time Field'),
+                DateTimeField::create('DateTimeField', 'Date and Time Field'),
                 CheckboxField::create('CheckboxField', 'Checkbox Field')
             ),
             $actions = FieldList::create(
