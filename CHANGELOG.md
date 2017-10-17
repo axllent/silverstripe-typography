@@ -2,13 +2,20 @@
 
 Notable changes to this project will be documented in this file.
 
+## [2.0.1]
+
+- Switch to silverstripe-vendormodule
+
+
 ## [2.0.0]
 
 - SilverStripe 4 support
 
+
 ## [1.1.1]
 
 - Fix SilverStripe framework version requirement
+
 
 ## [1.1.0]
 

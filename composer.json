@@ -1,7 +1,7 @@
 {
 	"name": "axllent/silverstripe-typography",
 	"description": "A simple extension (extending Page) to add a simple typography test page to see your website styles",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"homepage": "https://github.com/axllent/silverstripe-typography",
 	"keywords": ["silverstripe", "typography", "testing"],
 	"license": "The MIT License (MIT)",
@@ -15,8 +15,14 @@
 		"issues": "https://github.com/axllent/silverstripe-typography/issues"
 	},
     "require": {
-		"silverstripe/framework": "^4.0@dev"
+        "silverstripe/vendor-plugin": "^1.0",
+		"silverstripe/framework": "^4.0"
 	},
+    "extra": {
+        "expose": [
+            "javascript"
+        ]
+    },
     "autoload": {
         "psr-4": {
             "Axllent\\Typography\\": "src/"

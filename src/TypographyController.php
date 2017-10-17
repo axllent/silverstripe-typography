@@ -42,9 +42,8 @@ class TypographyController extends PageController
 
     public function index()
     {
-        Requirements::javascript(
-            basename(dirname(dirname(__FILE__))) . '/javascript/typo.js'
-        );
+        Requirements::javascript('axllent/silverstripe-typography: javascript/typography.js');
+
         $this->Title = 'Typography test page';
         $this->ExtraMeta .= '<meta name="robots" content="noindex, nofollow" />';
 
