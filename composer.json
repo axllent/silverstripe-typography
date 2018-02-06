@@ -4,7 +4,7 @@
 	"type": "silverstripe-module",
 	"homepage": "https://github.com/axllent/silverstripe-typography",
 	"keywords": ["silverstripe", "typography", "testing"],
-	"license": "The MIT License (MIT)",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Ralph Slooten",
