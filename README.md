@@ -10,7 +10,7 @@ For SilverStripe 3, please refer to the [SilverStripe3 branch](https://github.co
 
 ## Installation
 ```
-composer require axllent/silverstripe-typography
+composer require axllent/silverstripe-typography --dev
 ```
 
 ## Usage

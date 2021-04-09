@@ -2,9 +2,15 @@
 
 Notable changes to this project will be documented in this file.
 
+## [2.0.3]
+
+- Make `index()` compatible with `PageController::index(SilverStripe\Control\HTTPRequest $request)`
+
+
 ## [2.0.2]
 
 - Switch to silverstripe-vendormodule
+
 
 ## [2.0.1]
 
