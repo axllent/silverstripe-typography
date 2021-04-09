@@ -40,7 +40,7 @@ use SilverStripe\View\Requirements;
 class TypographyController extends PageController
 {
 
-    public function index()
+    public function index(\SilverStripe\Control\HTTPRequest $request)
     {
         Requirements::javascript('axllent/silverstripe-typography: javascript/typography.js');
 
