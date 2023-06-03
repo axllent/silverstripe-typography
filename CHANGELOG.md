@@ -2,6 +2,11 @@
 
 Notable changes to this project will be documented in this file.
 
+## [2.0.4]
+
+- Support for Silverstripe 5
+
+
 ## [2.0.3]
 
 - Make `index()` compatible with `PageController::index(SilverStripe\Control\HTTPRequest $request)`
