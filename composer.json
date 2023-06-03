@@ -1,23 +1,27 @@
 {
-	"name": "axllent/silverstripe-typography",
-	"description": "A simple extension (extending Page) to add a simple typography test page to see your website styles",
-	"type": "silverstripe-vendormodule",
-	"homepage": "https://github.com/axllent/silverstripe-typography",
-	"keywords": ["silverstripe", "typography", "testing"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Ralph Slooten",
-			"homepage": "http://www.axllent.org/"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/axllent/silverstripe-typography/issues"
-	},
+    "name": "axllent/silverstripe-typography",
+    "description": "A simple extension (extending Page) to add a simple typography test page to see your website styles",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/axllent/silverstripe-typography",
+    "keywords": [
+        "silverstripe",
+        "typography",
+        "testing"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ralph Slooten",
+            "homepage": "http://www.axllent.org/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/axllent/silverstripe-typography/issues"
+    },
     "require": {
-        "silverstripe/vendor-plugin": "^1.0",
-		"silverstripe/framework": "^4.0"
-	},
+        "silverstripe/vendor-plugin": "^1.0 || ^2.0",
+        "silverstripe/framework": "^4.0 || ^5.0"
+    },
     "extra": {
         "expose": [
             "javascript"

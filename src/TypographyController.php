@@ -2,7 +2,7 @@
 
 namespace Axllent\Typography;
 
-use PageController;
+use SilverStripe\Control\Director;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\CurrencyField;
@@ -23,37 +23,63 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\View\Requirements;
 
-
 /**
  * Typography test page for SilverStripe
  * =====================================
  *
- * A SilerStripe extension to add a typography test page to your website
+ * A Silverstripe extension to add a typography test page to your website
  *
  * Once installed, run a flush=1 and access /typo/ on your website
- * eg: www.exmaple.com/typo/
+ * eg: www.example.com/typo/
  *
  * License: MIT-style license http://opensource.org/licenses/MIT
  * Author: Techno Joy development team (www.technojoy.co.nz)
  * Inspired by https://github.com/sunnysideup/silverstripe-typography
  */
-class TypographyController extends PageController
+class TypographyController extends \PageController
 {
+    /**
+     * Allowed actions
+     *
+     * @var array
+     *
+     * @config
+     */
+    private static $allowed_actions = [
+        'TestForm',
+    ];
 
-    public function index(\SilverStripe\Control\HTTPRequest $request)
+    public function link($action = null)
+    {
+        return Director::baseURL() . 'typo';
+    }
+
+    /**
+     * Index
+     *
+     * @param HTTPRequest $request HTTP request
+     *
+     * @return HTTPResponse
+     */
+    public function index($request)
     {
         Requirements::javascript('axllent/silverstripe-typography: javascript/typography.js');
 
         $this->Title = 'Typography test page';
-        $this->ExtraMeta .= '<meta name="robots" content="noindex, nofollow" />';
+        $this->ExtraMeta .= '<meta name="robots" content="noindex, nofollow">';
 
-        return $this->renderWith(array('Typography', 'Page'));
+        return $this->renderWith(['Typography', 'Page']);
     }
 
-    function TypoForm()
+    /**
+     * Typo form
+     *
+     * @return Form
+     */
+    public function typoForm()
     {
-        $array= array('green', 'yellow', 'blue', 'pink', 'orange');
-        $form = new Form(
+        $array = ['green', 'yellow', 'blue', 'pink', 'orange'];
+        $form  = Form::create(
             $this,
             'TestForm',
             $fields = FieldList::create(
@@ -74,7 +100,15 @@ class TypographyController extends PageController
                     ->setRightTitle('This is the right title'),
                 EmailField::create('EmailField', 'Email address'),
                 HeaderField::create('HeaderField2c', 'HeaderField Level 2', 2),
-                DropdownField::create('DropdownField', 'Dropdown Field', array( 0 => '-- please select --', 1 => 'test AAAA', 2 => 'test BBBB')),
+                DropdownField::create(
+                    'DropdownField',
+                    'Dropdown Field',
+                    [
+                        0 => '-- please select --',
+                        1 => 'test AAAA',
+                        2 => 'test BBBB'
+                    ]
+                ),
                 OptionsetField::create('OptionSF', 'Optionset Field', $array),
                 CheckboxSetField::create('CheckboxSF', 'Checkbox Set Field', $array),
                 CurrencyField::create('CurrencyField', 'Bling bling', '$123.45'),
@@ -102,11 +136,19 @@ class TypographyController extends PageController
         );
 
         $form->setMessage('warning message', 'warning');
+
         return $form;
     }
 
-    function TestForm($data)
+    /**
+     * Simple redirect function
+     *
+     * @param array $data Form data
+     *
+     * @return HTTPResponse
+     */
+    public function testForm($data)
     {
-        $this->redirectBack();
+        return $this->redirectBack();
     }
 }
